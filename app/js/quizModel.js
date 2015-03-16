@@ -5,6 +5,10 @@
 // the next time.
 quizApp.factory('quizModel',function ($resource, $cookieStore) { 
   
-  
+
+
+
+
+  return this;
 
 });
