@@ -27,6 +27,28 @@ which module to associate the app with. In app.js we create the "dinnerPlanner" 
     <script src="js/testCtrl.js"></script>
 
   </head>
+  <script type="text/javascript">
+    $('#OverViewSlider').carousel({
+      interval: 4000
+    })
+
+    $('.carousel .item').each(function(){
+      var next = $(this).next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      for (var i=0;i<2;i++) {
+        next=next.next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        
+        next.children(':first-child').clone().appendTo($(this));
+      }
+    });
+  </script>
   <body height="100%">
     
     <!-- Here in index.html you should put only the layout that is shared among all the screens (e.g. header
@@ -39,4 +61,10 @@ which module to associate the app with. In app.js we create the "dinnerPlanner" 
     </div>
 
   </body>
+
+
+
+<script src="ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+<script src="netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js" type="text/javascript"></script>
 </html>
