@@ -3,4 +3,4 @@ A project in interaction programming
 
 ## commiting standard:
 do NOT use "add ." only add relevant files to commit  
-'contributor1,contributor2 .. <msg>'
+'contributor1,contributor2 .. [msg]'
